@@ -1,50 +1,56 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="ca">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hola Mundo</title>
-    <style>
-        body {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-            margin: 0;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        }
-        .container {
-            text-align: center;
-            padding: 2rem;
-            background: rgba(255, 255, 255, 0.1);
-            backdrop-filter: blur(10px);
-            border-radius: 20px;
-            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
-            border: 1px solid rgba(255, 255, 254, 0.2);
-        }
-        h1 {
-            color: white;
-            font-size: 10rem;
-            margin: 0;
-            text-shadow: 4px 4px 4px rgba(0, 0, 2, 0.3);
-            animation: typing 2s steps(30, end) forwards, blink-caret 1s step-end infinite;
-            text-align: center;
-        }
-        @keyframes typing {
-            from { width: 0; }
-            to { width: 100%; }
-        }
-
-        @keyframes blink-caret {
-            from, to { border-color: white; }
-            50% { border-color: transparent; }
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Portafoli de [Nom]</title>
+  <link rel="stylesheet" href="css/estils.css" />
 </head>
 <body>
-    <div class="container">
-        <h1>¡Hola Mundo!</h1>
-    </div>
+  <header>
+    <h1>El meu Portafoli</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Inici</a></li>
+        <li><a href="projectes.html">Projectes</a></li>
+        <li><a href="#contacte">Contacte</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="presentacio">
+      <h2>Hola! Sóc [Nom]</h2>
+      <p>Estudiant d’ASIX a l’ITB.</p>
+    </section>
+
+    <section class="projectes-destacats">
+      <article>
+        <h3>Projecte 1: Web Estàtica</h3>
+        <a href="projecte1.html">Veure més</a>
+      </article>
+      <article>
+        <h3>Projecte 2: API REST</h3>
+        <a href="projecte2.html">Veure més</a>
+      </article>
+    </section>
+
+    <aside>
+      <p>Tecnologies: HTML, CSS, JavaScript</p>
+    </aside>
+  </main>
+
+  <footer id="contacte">
+    <h3>Contacte</h3>
+    <form id="formContacte">
+      <input type="text" name="nom" placeholder="El teu nom" required pattern="[A-Za-zÀ-ÿ\s]{2,30}" />
+      <input type="email" name="email" placeholder="Correu electrònic" required />
+      <textarea name="missatge" placeholder="El teu missatge" required minlength="10"></textarea>
+      <button type="submit">Enviar</button>
+    </form>
+    <p>&copy; 2025 [Nom]. Tots els drets reservats.</p>
+  </footer>
+
+  <script src="js/script.js"></script>
 </body>
 </html>
