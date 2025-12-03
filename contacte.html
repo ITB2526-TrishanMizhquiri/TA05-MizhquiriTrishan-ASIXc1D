@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulari de Contacte</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">Portfolio</div>
+            <div class="nav-links">
+                <a href="index.html">Inici</a>
+                <a href="projectes.html">Projectes</a>
+                <a href="contacte.html" class="active">Contacte</a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <div class="page-content">
+            <h1>Formulari de Contacte</h1>
+            
+            <div class="contact-form">
+                <div class="success-message" id="successMessage">
+                    El teu missatge s'ha enviat correctament! Ens posarem en contacte amb tu aviat.
+                </div>
+                
+                <form id="contactForm">
+                    <div class="form-group">
+                        <label for="name">Nom i Cognoms *</label>
+                        <input type="text" id="name" name="name" required 
+                               pattern="[A-Za-zÀ-ÿ\s]{2,50}" 
+                               title="Introdueix un nom vàlid (entre 2 i 50 caràcters)">
+                        <div class="error-message" id="nameError">Si us plau, introdueix un nom vàlid</div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">Correu Electrònic *</label>
+                        <input type="email" id="email" name="email" required
+                               pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+                               title="Introdueix una adreça de correu electrònic vàlida">
+                        <div class="error-message" id="emailError">Si us plau, introdueix un correu electrònic vàlid</div>
+                    </div>
+                    
+                    <div class = "form-group">
+                        <label for="phone">Telèfon</label>
+                        <input type="tel" id="phone" name="phone" 
+                               pattern="[0-9]{9}" 
+                               title="Introdueix un número de telèfon vàlid (9 dígits)">
+                        <div class="error-message" id="phoneError">Si us plau, introdueix un número de telèfon vàlid (9 dígits)</div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="subject">Assumpte *</label>
+                        <select id="subject" name="subject" required>
+                            <option value="">Selecciona un assumpte</option>
+                            <option value="project">Consulta sobre projectes</option>
+                            <option value="collaboration">Col·laboració professional</option>
+                            <option value="job">Oferta de feina</option>
+                            <option value="other">Altres</option>
+                        </select>
+                        <div class="error-message" id="subjectError">Si us plau, selecciona un assumpte</div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="message">Missatge *</label>
+                        <textarea id="message" name="message" rows="5" required 
+                                  minlength="10" maxlength="1000"
+                                  title="El missatge ha de tenir entre 10 i 1000 caràcters"></textarea>
+                        <div class="error-message" id="messageError">Si us plau, introdueix un missatge vàlid (10-1000 caràcters)</div>
+                    </div>
+                    
+                    <button type="submit" class="submit-btn">Enviar Missatge</button>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Portfolio de Projectes. Tots els drets reservats.</p>
+    </footer>

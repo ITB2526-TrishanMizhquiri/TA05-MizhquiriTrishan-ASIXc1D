@@ -1,56 +1,55 @@
 <!DOCTYPE html>
 <html lang="ca">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Portafoli de [Nom]</title>
-  <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio de Projectes - Inici</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header>
-    <h1>El meu Portafoli</h1>
-    <nav>
-      <ul>
-        <li><a href="index.html">Inici</a></li>
-        <li><a href="projectes.html">Projectes</a></li>
-        <li><a href="#contacte">Contacte</a></li>
-      </ul>
-    </nav>
-  </header>
+    <header>
+        <nav>
+            <div class="logo">Portfolio</div>
+            <div class="nav-links">
+                <a href="index.html" class="active">Inici</a>
+                <a href="projectes.html">Projectes</a>
+                <a href="contacte.html">Contacte</a>
+            </div>
+        </nav>
+    </header>
 
-  <main>
-    <section class="presentacio">
-      <h2>Hola! Sóc [Nom]</h2>
-      <p>Estudiant d’ASIX a l’ITB.</p>
-    </section>
+    <main>
+        <section class="hero">
+            <h1>Benvingut al meu Portfolio</h1>
+            <p>Descobreix els meus projectes destacats i el meu treball</p>
+        </section>
+        
+        <section class="projects-section">
+            <h2>Projectes Destacats</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-image">
+                        <div class="placeholder">AI</div>
+                    </div>
+                    <h3>Aplicació de Gestió d'Inventari</h3>
+                    <p>Sistema avançat per gestionar inventaris en temps real amb integració d'intel·ligència artificial per predir necessitats.</p>
+                    <a href="detall-projecte1.html" class="btn">Veure Detalls</a>
+                </div>
+                
+                <div class="project-card">
+                    <div class="project-image">
+                        <div class="placeholder">EDU</div>
+                    </div>
+                    <h3>Plataforma Educativa en Línia</h3>
+                    <p>Plataforma interactiva per a l'aprenentatge en línia amb funcionalitats de seguiment personalitzat i avaluació automàtica.</p>
+                    <a href="detall-projecte2.html" class="btn">Veure Detalls</a>
+                </div>
+            </div>
+        </section>
+    </main>
 
-    <section class="projectes-destacats">
-      <article>
-        <h3>Projecte 1: Web Estàtica</h3>
-        <a href="projecte1.html">Veure més</a>
-      </article>
-      <article>
-        <h3>Projecte 2: API REST</h3>
-        <a href="projecte2.html">Veure més</a>
-      </article>
-    </section>
-
-    <aside>
-      <p>Tecnologies: HTML, CSS, JavaScript</p>
-    </aside>
-  </main>
-
-  <footer id="contacte">
-    <h3>Contacte</h3>
-    <form id="formContacte">
-      <input type="text" name="nom" placeholder="El teu nom" required pattern="[A-Za-zÀ-ÿ\s]{2,30}" />
-      <input type="email" name="email" placeholder="Correu electrònic" required />
-      <textarea name="missatge" placeholder="El teu missatge" required minlength="10"></textarea>
-      <button type="submit">Enviar</button>
-    </form>
-    <p>&copy; 2025 [Nom]. Tots els drets reservats.</p>
-  </footer>
-
-  <script src="js/script.js"></script>
+    <footer>
+        <p>&copy; 2025 Portfolio de Projectes. Tots els drets reservats.</p>
+    </footer>
 </body>
 </html>
