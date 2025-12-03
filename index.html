@@ -30,9 +30,14 @@
             text-shadow: 4px 4px 4px rgba(0, 0, 2, 0.3);
             animation: fadeIn 1s ease-in;
         }
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(-20px); }
-            to { opacity: 1; transform: translateY(0); }
+        @keyframes typing {
+            from { width: 0; }
+            to { width: 100%; }
+        }
+
+        @keyframes blink-caret {
+            from, to { border-color: white; }
+            50% { border-color: transparent; }
         }
     </style>
 </head>
