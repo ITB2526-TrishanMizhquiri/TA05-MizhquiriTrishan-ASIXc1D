@@ -3,58 +3,71 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Portafolio Personal</title>
+        <title>Portafolio de Proyectos</title>
         <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     </head>
     <body>
-        <header>
-            <nav class="logo">
-                <button>logo</button>
+        <!-- Barra lateral de navegación -->
+        <aside class="sidebar">
+            <div class="logo">Portafolio</div>
+            <nav class="nav-links">
+                <a href="#" class="active">Inicio</a>
+                <a href="#">Proyectos</a>
+                <a href="#">Sobre mí</a>
+                <a href="#">Habilidades</a>
+                <a href="#">Contacto</a>
             </nav>
-            <h1>Header</h1>
-            <nav class="menu">
-                <input type="text" placeholder="nav - menú">
-            </nav>
-        </header>
-    
-        <main>
-            <section class="presentacio">
-                <h1>benvinguda</h1>
-                <h2>sobre mi</h2>
-                <p>bibliografia</p>
+        </aside>
+
+        <!-- Contenido principal -->
+        <main class="content">
+            <!-- Sección hero -->
+            <section class="hero">
+                <h1>Mis Proyectos Destacados</h1>
+                <p>Explora mi trabajo más reciente y descubre cómo puedo contribuir a tus próximos proyectos</p>
             </section>
-        
-            <section class="projectes-destacats">
-                <h1>projectes</h1>
-                <p>descripció</p>
-            
-                <div class="projecte-container">
-                    <div class="projecte projecte-1">
-                        <p>projecte 1</p>
-                        <nav>
-                            <button>veure més detalls</button>
-                        </nav>
-                    </div>
+
+            <!-- Sección de proyectos -->
+            <section class="projects-section">
+                <h2>Proyectos Recientes</h2>
+                <div class="projects-grid">
+                    <!-- Tarjeta de proyecto 1 -->
+                    <article class="project-card">
+                        <div class="project-image">
+                            <div class="placeholder">1</div>
+                        </div>
+                        <h3>Diseño Web Responsivo</h3>
+                        <p>Desarrollo de una plataforma web adaptativa para dispositivos móviles y escritorio.</p>
+                        <a href="#" class="btn">Ver detalles</a>
+                    </article>
                 
-                    <div class="projecte projecte-2">
-                        <p>projecte 2</p>
-                        <nav>
-                            <button>veure més detalls</button>
-                        </nav>
-                    </div>
+                    <!-- Tarjeta de proyecto 2 -->
+                    <article class="project-card">
+                        <div class="project-image">
+                            <div class="placeholder">2</div>
+                        </div>
+                        <h3>Aplicación Móvil</h3>
+                        <p>Diseño y desarrollo de una aplicación móvil para gestión de tareas personales.</p>
+                        <a href="#" class="btn">Ver detalles</a>
+                    </article>
+                
+                    <!-- Tarjeta de proyecto 3 -->
+                    <article class="project-card">
+                        <div class="project-image">
+                            <div class="placeholder">3</div>
+                        </div>
+                        <h3>Sistema de E-commerce</h3>
+                        <p>Implementación de una tienda online con carrito de compras y pasarela de pago.</p>
+                        <a href="#" class="btn">Ver detalles</a>
+                    </article>
                 </div>
             </section>
-        
-            <section class="contacta">
-                <h2>Contacta amb nosaltres</h2>
-                <nav>
-                    <button>derivar a la pàgina de contacte</button>
-                </nav>
-            </section>
         </main>
-    
+
+        <!-- Pie de página -->
         <footer>
-            <p>copyright</p>
+            <p>&copy; 2023 Mi Portafolio. Todos los derechos reservados.</p>
         </footer>
     </body>
 </html>
