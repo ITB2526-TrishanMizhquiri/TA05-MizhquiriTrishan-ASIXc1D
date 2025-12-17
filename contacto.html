@@ -3,21 +3,21 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="description" content="Proyectos de Trishan Mizhquiri Valencia - Administrador de Sistemas y Redes">
-        <title>Proyectos | TRISHAN MIZHQUIRI VALENCIA</title>
+        <meta name="description" content="Contacto de Bilal El Younossi - Administrador de Sistemas y Redes">
+        <title>Contacto | Bilal El Younossi</title>
         <link rel="stylesheet" href="style.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     </head>
     <body>
         <!-- Barra de navegación superior -->
         <header class="topbar">
-            <div class="logo">TRISHAN MIZHQUIRI VALENCIA</div>
+            <div class="logo">BILAL EL YOUNOSSI</div>
             <nav class="nav-links">
                 <a href="index.html">Inicio</a>
-                <a href="proyectos.html" class="active">Proyectos</a>
+                <a href="proyectos.html">Proyectos</a>
                 <a href="sobre-mi.html">Sobre mí</a>
                 <a href="habilidades.html">Habilidades</a>
-                <a href="contacto.html">Contacto</a>
+                <a href="contacto.html" class="active">Contacto</a>
             </nav>
         </header>
 
@@ -26,7 +26,7 @@
             <section class="contact-section">
                 <h2 class="section-title">Contacto</h2>
                 <p class="section-description">¿Estás interesado en contratar mis servicios o quieres saber más sobre mi trabajo? No dudes en contactarme a través de los siguientes medios:</p>
-                
+               
                 <div class="contact-info">
                     <div class="contact-item">
                         <i class="fas fa-envelope"></i>
@@ -54,6 +54,47 @@
                     </div>
                 </div>
 
+                <!-- Formulario de contacto añadido aquí, manteniendo la misma estética -->
+                <div class="contact-section" style="margin-top: 3rem; padding: 2rem;">
+                    <h2 class="section-title">Formulario de Contacto</h2>
+                    <p class="section-description">Completa el formulario y me pondré en contacto contigo lo antes posible.</p>
+                   
+                    <form id="formulario-contacto" style="max-width: 800px; margin: 0 auto;">
+                        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem; margin-bottom: 1.5rem;">
+                            <div class="form-group">
+                                <label for="nombre" style="display: block; margin-bottom: 0.5rem; color: var(--color-neon-azul); font-weight: bold;">Nombre</label>
+                                <input type="text" id="nombre" name="nombre" required
+                                    style="width: 100%; padding: 0.8rem; background: rgba(0, 20, 40, 0.4); border: 1px solid rgba(0, 240, 255, 0.3); border-radius: 8px; color: var(--color-texto); font-family: var(--fuente-principal); font-size: 1rem; transition: all 0.3s;">
+                            </div>
+                           
+                            <div class="form-group">
+                                <label for="email" style="display: block; margin-bottom: 0.5rem; color: var(--color-neon-azul); font-weight: bold;">Email</label>
+                                <input type="email" id="email" name="email" required
+                                    style="width: 100%; padding: 0.8rem; background: rgba(0, 20, 40, 0.4); border: 1px solid rgba(0, 240, 255, 0.3); border-radius: 8px; color: var(--color-texto); font-family: var(--fuente-principal); font-size: 1rem; transition: all 0.3s;">
+                            </div>
+                        </div>
+                       
+                        <div class="form-group" style="margin-bottom: 1.5rem;">
+                            <label for="asunto" style="display: block; margin-bottom: 0.5rem; color: var(--color-neon-azul); font-weight: bold;">Asunto</label>
+                            <input type="text" id="asunto" name="asunto" required
+                                style="width: 100%; padding: 0.8rem; background: rgba(0, 20, 40, 0.4); border: 1px solid rgba(0, 240, 255, 0.3); border-radius: 8px; color: var(--color-texto); font-family: var(--fuente-principal); font-size: 1rem; transition: all 0.3s;">
+                        </div>
+                       
+                        <div class="form-group" style="margin-bottom: 1.5rem;">
+                            <label for="mensaje" style="display: block; margin-bottom: 0.5rem; color: var(--color-neon-azul); font-weight: bold;">Mensaje</label>
+                            <textarea id="mensaje" name="mensaje" rows="6" required
+                                style="width: 100%; padding: 0.8rem; background: rgba(0, 20, 40, 0.4); border: 1px solid rgba(0, 240, 255, 0.3); border-radius: 8px; color: var(--color-texto); font-family: var(--fuente-principal); font-size: 1rem; line-height: 1.6; resize: vertical; transition: all 0.3s;"></textarea>
+                        </div>
+                       
+                        <div style="text-align: center;">
+                            <button type="submit" class="btn"
+                                style="background: transparent; color: var(--color-neon-violeta); border: 1px solid var(--color-neon-violeta); padding: 0.8rem 2rem; font-family: var(--fuente-principal); cursor: pointer; transition: all 0.3s; font-weight: bold;">
+                                Enviar Mensaje
+                            </button>
+                        </div>
+                    </form>
+                </div>
+
                 <div class="page-nav">
                     <a href="habilidades.html" class="prev">
                         <i class="fas fa-arrow-left"></i> Habilidades
@@ -66,7 +107,7 @@
         </main>
 
         <footer>
-            <p>&copy; 2025 TRISHAN MIZHQUIRI VALENCIA. Administrador de Sistemas y Redes con especialidad en Ciberseguridad.</p>
+            <p>&copy; 2025 BILAL EL YOUNOSSI. Administrador de Sistemas y Redes con especialidad en Ciberseguridad.</p>
         </footer>
 
         <script>
@@ -79,6 +120,33 @@
                     } else {
                         link.classList.remove('active');
                     }
+                });
+            });
+
+            // Formulario de contacto
+            document.getElementById('formulario-contacto').addEventListener('submit', function(e) {
+                e.preventDefault();
+               
+                // Aquí podrías añadir la lógica para enviar el formulario
+                // Por ahora, solo mostramos una alerta de éxito
+                const nombre = document.getElementById('nombre').value;
+               
+                alert(`¡Gracias ${nombre}! Tu mensaje ha sido enviado correctamente. Te responderé pronto.`);
+               
+                // Limpiar el formulario
+                this.reset();
+            });
+
+            // Efectos hover para los inputs
+            document.querySelectorAll('input, textarea').forEach(input => {
+                input.addEventListener('focus', function() {
+                    this.style.borderColor = 'var(--color-neon-violeta)';
+                    this.style.boxShadow = '0 0 8px rgba(185, 103, 255, 0.5)';
+                });
+               
+                input.addEventListener('blur', function() {
+                    this.style.borderColor = 'rgba(0, 240, 255, 0.3)';
+                    this.style.boxShadow = 'none';
                 });
             });
         </script>
