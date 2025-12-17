@@ -3,20 +3,21 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Portafolio de Proyectos</title>
+        <meta name="description" content="Portafolio de Bilal El Younossi - Administrador de Sistemas y Redes con especialidad en Ciberseguridad">
+        <title>Bilal El Younossi | Portafolio</title>
         <link rel="stylesheet" href="style.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     </head>
     <body>
         <!-- Barra de navegación superior -->
         <header class="topbar">
-            <div class="logo">Portafolio</div>
+            <div class="logo">BILAL EL YOUNOSSI</div>
             <nav class="nav-links">
-                <a href="#" class="active">Inicio</a>
-                <a href="#">Proyectos</a>
-                <a href="#">Sobre mí</a>
-                <a href="#">Habilidades</a>
-                <a href="#">Contacto</a>
+                <a href="index.html" class="active">Inicio</a>
+                <a href="proyectos.html">Proyectos</a>
+                <a href="sobre-mi.html">Sobre mí</a>
+                <a href="habilidades.html">Habilidades</a>
+                <a href="contacto.html">Contacto</a>
             </nav>
         </header>
 
@@ -24,38 +25,48 @@
         <main class="content">
             <!-- Sección hero -->
             <section class="hero">
-                <h1>Mis Proyectos Destacados</h1>
-                <p>Explora mi trabajo más reciente y descubre cómo puedo contribuir a tus próximos proyectos</p>
+                <h1>Administrador de Sistemas y Redes</h1>
+                <p>Especialista en Ciberseguridad y Gestión de Infraestructuras Tecnológicas</p>
             </section>
 
-            <!-- Sección de proyectos -->
-            <section class="projects-section">
-                <h2>Proyectos Recientes</h2>
+            <!-- Resumen de contenido -->
+            <section class="welcome-section">
+                <h2 class="section-title">Bienvenido a mi portafolio</h2>
+                <p class="section-description">Este portafolio muestra mi experiencia y habilidades como administrador de sistemas y redes con especialidad en ciberseguridad. Aquí encontrarás información sobre mis proyectos, habilidades técnicas y cómo puedes contactarme.</p>
+                
                 <div class="projects-grid">
-                    <article class="project-card">
-                        <div class="project-image"><div class="placeholder">1</div></div>
-                        <h3>Diseño Web Responsivo</h3>
-                        <p>Desarrollo de una plataforma web adaptativa para dispositivos móviles y escritorio.</p>
-                        <a href="#" class="btn">Ver detalles</a>
-                    </article>
-                    <article class="project-card">
-                        <div class="project-image"><div class="placeholder">2</div></div>
-                        <h3>Aplicación Móvil</h3>
-                        <p>Diseño y desarrollo de una aplicación móvil para gestión de tareas personales.</p>
-                        <a href="#" class="btn">Ver detalles</a>
-                    </article>
-                    <article class="project-card">
-                        <div class="project-image"><div class="placeholder">3</div></div>
-                        <h3>Sistema de E-commerce</h3>
-                        <p>Implementación de una tienda online con carrito de compras y pasarela de pago.</p>
-                        <a href="#" class="btn">Ver detalles</a>
-                    </article>
+                    <div class="project-card">
+                        <div class="project-image"><div class="placeholder">DB</div></div>
+                        <h3>Sistema de Filtraje de Bases de Datos</h3>
+                        <p>Implementación de un sistema avanzado de filtrado y monitoreo de bases de datos para detectar accesos no autorizados y actividades sospechosas.</p>
+                        <a href="proyectos.html" class="btn">Ver detalles</a>
+                    </div>
+                    <div class="project-card">
+                        <div class="project-image"><div class="placeholder">IA</div></div>
+                        <h3>Desarrollo de Webs mediante IA</h3>
+                        <p>Desarrollo de aplicaciones web utilizando inteligencia artificial para optimizar la administración de servidores y redes.</p>
+                        <a href="proyectos.html" class="btn">Ver detalles</a>
+                    </div>
                 </div>
             </section>
         </main>
 
         <footer>
-            <p>&copy; 2023 Mi Portafolio. Todos los derechos reservados.</p>
+            <p>&copy; 2025 BILAL EL YOUNOSSI. Administrador de Sistemas y Redes con especialidad en Ciberseguridad.</p>
         </footer>
+
+        <script>
+            // Highlight active page
+            document.addEventListener('DOMContentLoaded', function() {
+                const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+                document.querySelectorAll('.nav-links a').forEach(link => {
+                    if (link.getAttribute('href') === currentPage) {
+                        link.classList.add('active');
+                    } else {
+                        link.classList.remove('active');
+                    }
+                });
+            });
+        </script>
     </body>
 </html>
