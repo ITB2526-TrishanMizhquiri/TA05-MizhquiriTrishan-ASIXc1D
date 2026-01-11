@@ -1,4 +1,4 @@
-=== RESET & VARIABLES === */
+/* === RESET & VARIABLES === */
 * {
   margin: 0;
   padding: 0;
@@ -133,7 +133,7 @@ body {
 /* === PROJECTS SECTION === */
 .projects-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(300px, 2fr));
   gap: 2rem;
 }
 
@@ -174,12 +174,11 @@ body {
   margin-bottom: 1.2rem;
   background: rgba(0, 0, 0, 0.2);
   border-radius: 8px;
-  color: var(--color-acento);
-  font-size: 3rem;
-  font-weight: bold;
   overflow: hidden;
-  max-height: 350px
+  position: relative;
+  max-height: 500px;
 }
+
 
 .project-image img {
   width: 100%;
