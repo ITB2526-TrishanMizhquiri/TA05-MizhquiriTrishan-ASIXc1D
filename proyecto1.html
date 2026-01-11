@@ -1,70 +1,72 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Proyectos de Trishan Mizhquiri Valencia - Administrador de Sistemas y Redes">
-    <title>Proyectos | TRISHAN MIZHQUIRI VALENCIA</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-</head>
-<body>
-    <!-- Barra de navegación superior -->
-    <header class="topbar">
-        <div class="logo">TRISHAN MIZHQUIRI VALENCIA</div>
-        <nav class="nav-links">
-            <a href="index.html">Inicio</a>
-            <a href="proyectos.html" class="active">Proyectos</a>
-            <a href="sobre-mi.html">Sobre mí</a>
-            <a href="habilidades.html">Habilidades</a>
-            <a href="contacto.html">Contacto</a>
-        </nav>
-    </header>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Proyectos de Trishan Mizhquiri Valencia - Administrador de Sistemas y Redes">
+        <title>Proyectos | TRISHAN MIZHQUIRI VALENCIA</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    </head>
+    <body>
+        <!-- Barra de navegación superior -->
+        <header class="topbar">
+            <div class="logo">TRISHAN MIZHQUIRI VALENCIA</div>
+            <nav class="nav-links">
+                <a href="index.html">Inicio</a>
+                <a href="proyectos.html" class="active">Proyectos</a>
+                <a href="sobre-mi.html">Sobre mí</a>
+                <a href="habilidades.html">Habilidades</a>
+                <a href="contacto.html">Contacto</a>
+            </nav>
+        </header>
 
-    <!-- Contenido principal -->
-    <main class="content">
-        <!-- Sección de proyectos -->
-        <section class="projects-section">
-            <h2 class="section-title">Proyectos Destacados</h2>
-            <p class="section-description">Estos son mis proyectos más relevantes como administrador de sistemas y redes con especialidad en ciberseguridad</p>
-            
-            <div class="projects-grid">
-                <article class="project-card">
-                    <div class="project-image">
-                        <img src="script.jpeg" alt="Scripts de Seguridad y Automatización">
-                    </div>
-                    <h3>Scripts de Seguridad y Automatización Multiplataforma</h3>
-                    <p>Implementación de scripts en Windows, Linux y macOS para tareas críticas de mantenimiento, respaldo, auditoría e integridad del sistema. Diseñados para entornos reales y con enfoque en buenas prácticas de ciberseguridad. Ideal para administradores que buscan automatizar tareas de seguridad sin depender de herramientas propietarias.</p>
-                </article>
-            </div>
+        <!-- Contenido principal -->
+        <main class="content">
+            <!-- Sección de proyectos -->
+            <section class="projects-section">
+                <h2 class="section-title">Proyectos Destacados</h2>
+                <p class="section-description">Estos son mis proyectos más relevantes como administrador de sistemas y redes con especialidad en ciberseguridad</p>
+                
+                <div class="projects-grid">
+                    <article class="project-card">
+                        <div class="project-image">
+                            <img src="https://placehold.co/300x160/0b0b1a/00ffaa?text=Script+Seguridad" alt="Scripts de Seguridad y Automatización">
+                        </div>
+                        <div class="project-content">
+                            <h3>Scripts de Seguridad y Automatización Multiplataforma</h3>
+                            <p>Implementación de scripts en Windows, Linux y macOS para tareas críticas de mantenimiento, respaldo, auditoría e integridad del sistema. Diseñados para entornos reales y con enfoque en buenas prácticas de ciberseguridad. Ideal para administradores que buscan automatizar tareas de seguridad sin depender de herramientas propietarias.</p>
+                        </div>
+                    </article>
+                </div>
 
-            <div class="page-nav">
-                <a href="index.html" class="prev">
-                    <i class="fas fa-arrow-left"></i> Página de Inicio
-                </a>
-                <a href="sobre-mi.html" class="next">
-                    Sobre Mí <i class="fas fa-arrow-right"></i>
-                </a>
-            </div>
-        </section>
-    </main>
+                <div class="page-nav">
+                    <a href="index.html" class="prev">
+                        <i class="fas fa-arrow-left"></i> Página de Inicio
+                    </a>
+                    <a href="sobre-mi.html" class="next">
+                        Sobre Mí <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            </section>
+        </main>
 
-    <footer>
-        <p>&copy; 2025 TRISHAN MIZHQUIRI VALENCIA. Administrador de Sistemas y Redes con especialidad en Ciberseguridad.</p>
-    </footer>
+        <footer>
+            <p>&copy; 2025 TRISHAN MIZHQUIRI VALENCIA. Administrador de Sistemas y Redes con especialidad en Ciberseguridad.</p>
+        </footer>
 
-    <script>
-        // Highlight active page
-        document.addEventListener('DOMContentLoaded', function() {
-            const currentPage = window.location.pathname.split('/').pop() || 'index.html';
-            document.querySelectorAll('.nav-links a').forEach(link => {
-                if (link.getAttribute('href') === currentPage) {
-                    link.classList.add('active');
-                } else {
-                    link.classList.remove('active');
-                }
+        <script>
+            // Highlight active page
+            document.addEventListener('DOMContentLoaded', function() {
+                const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+                document.querySelectorAll('.nav-links a').forEach(link => {
+                    if (link.getAttribute('href') === currentPage) {
+                        link.classList.add('active');
+                    } else {
+                        link.classList.remove('active');
+                    }
+                });
             });
-        });
-    </script>
-</body>
+        </script>
+    </body>
 </html>
