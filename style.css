@@ -415,24 +415,3 @@ footer {
     margin-top: 1rem;
   }
 }
-
-/* === LOGO IMAGE STYLES === */
-.logo-container {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-.logo-container .logo {
-  font-size: 1.4rem;
-}
-}
-.icon-logo {
-  width: 40px;
-  height: 40px;
-}
-
-/* icon styles */
-.icon-logo {
-  width: 50px;
-  height: 50px;
-}
