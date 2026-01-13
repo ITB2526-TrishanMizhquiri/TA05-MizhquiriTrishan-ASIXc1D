@@ -416,10 +416,10 @@ footer {
   }
 }
  /* === LOGO LINK STYLES === */
-.logo,
-.logo:hover,
-.logo:visited,
-.logo:active {
+.icon,
+.icon:hover,
+.icon:visited,
+.icon:active {
     text-decoration: none;
     color: inherit;
 }
@@ -432,6 +432,6 @@ footer {
 }
 
 .logo {
-    width: 50px; /* ajusta según necesites */
+    width: 70px; /* ajusta según necesites */
     height: auto;
 }
