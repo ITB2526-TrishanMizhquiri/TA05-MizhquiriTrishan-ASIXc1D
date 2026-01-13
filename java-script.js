@@ -1,5 +1,5 @@
-// === CLASE PRINCIPAL PARA EL HUMO NEÓN ===
-class NeonSmoke {
+// === CLASE PRINCIPAL PARA EL HUMO NEÓN FLUIDO ===
+class FluidNeonSmoke {
     constructor() {
         this.canvas = document.createElement('canvas');
         this.canvas.id = 'neon-smoke-canvas';
@@ -15,165 +15,92 @@ class NeonSmoke {
         document.body.insertBefore(this.canvas, document.body.firstChild);
 
         this.ctx = this.canvas.getContext('2d');
-        this.particles = [];
-        this.mouse = { x: undefined, y: undefined, active: false };
-        this.maxParticles = 300;
+        this.width = window.innerWidth;
+        this.height = window.innerHeight;
+        this.time = 0;
 
         this.init();
         this.animate();
-
-        // Event listeners
-        window.addEventListener('mousemove', (e) => {
-            this.mouse.x = e.clientX;
-            this.mouse.y = e.clientY;
-            this.mouse.active = true;
-        });
-
-        window.addEventListener('touchmove', (e) => {
-            if (e.touches[0]) {
-                this.mouse.x = e.touches[0].clientX;
-                this.mouse.y = e.touches[0].clientY;
-                this.mouse.active = true;
-            }
-        });
-
-        window.addEventListener('mouseleave', () => {
-            this.mouse.active = false;
-        });
-
-        window.addEventListener('resize', () => this.resizeCanvas());
     }
 
     init() {
         this.resizeCanvas();
-
-        // Crear partículas de humo
-        for (let i = 0; i < this.maxParticles; i++) {
-            this.particles.push(new SmokeParticle(
-                Math.random() * this.canvas.width,
-                Math.random() * this.canvas.height,
-                Math.random() * 0.5 + 0.3,
-                this.ctx
-            ));
-        }
     }
 
     resizeCanvas() {
-        this.canvas.width = window.innerWidth;
-        this.canvas.height = window.innerHeight;
+        this.width = window.innerWidth;
+        this.height = window.innerHeight;
+        this.canvas.width = this.width;
+        this.canvas.height = this.height;
     }
 
     animate() {
         requestAnimationFrame(() => this.animate());
-        this.ctx.clearRect(0, 0, this.canvas.width, this.canvas.height);
+        this.time += 0.01;
 
-        // Dibujar fondo oscuro
-        this.ctx.fillStyle = '#000000';
-        this.ctx.fillRect(0, 0, this.canvas.width, this.canvas.height);
+        // Limpiar lienzo
+        this.ctx.clearRect(0, 0, this.width, this.height);
 
-        // Actualizar y dibujar partículas
-        this.particles.forEach(particle => {
-            particle.update(this.mouse);
-            particle.draw();
-        });
-    }
-}
-
-// === CLASE PARTÍCULA DE HUMO ===
-class SmokeParticle {
-    constructor(x, y, radius, ctx) {
-        this.x = x;
-        this.y = y;
-        this.radius = radius;
-        this.ctx = ctx;
-        this.vx = (Math.random() - 0.5) * 0.3;
-        this.vy = (Math.random() - 0.5) * 0.3;
-        this.color = this.getRandomColor(); // Azul, Blanco, Violeta neón
-        this.alpha = 0.6 + Math.random() * 0.3;
-        this.angle = Math.random() * Math.PI * 2;
-        this.distance = Math.random() * 10;
-        this.baseSpeed = 0.005 + Math.random() * 0.01;
-        this.mouseInfluence = 0.02;
+        // Dibujar humo neón
+        this.drawFluidSmoke();
     }
 
-    getRandomColor() {
-        const colors = [
-            '#00f0ff', // Azul neón
-            '#ffffff', // Blanco neón
-            '#b967ff', // Violeta neón
-            '#cc99ff', // Lila brillante
-            '#00ffaa'  // Verde azulado neón (opcional)
-        ];
-        return colors[Math.floor(Math.random() * colors.length)];
-    }
+    drawFluidSmoke() {
+        const ctx = this.ctx;
+        const w = this.width;
+        const h = this.height;
 
-    draw() {
-        // Gradiente para el efecto de brillo
-        const gradient = this.ctx.createRadialGradient(
-            this.x, this.y, 0,
-            this.x, this.y, this.radius * 3
-        );
-        gradient.addColorStop(0, this.color);
-        gradient.addColorStop(1, 'transparent');
+        // Crear gradiente radial para cada "nube"
+        for (let i = 0; i < 8; i++) {
+            const x = w * 0.5 + Math.cos(this.time + i * 0.5) * w * 0.3;
+            const y = h * 0.5 + Math.sin(this.time + i * 0.7) * h * 0.2;
+            const size = w * 0.4 + Math.sin(this.time * 0.3 + i) * w * 0.1;
 
-        this.ctx.beginPath();
-        this.ctx.arc(this.x, this.y, this.radius * 3, 0, Math.PI * 2);
-        this.ctx.fillStyle = gradient;
-        this.ctx.fill();
-    }
+            // Elegir color neón aleatorio
+            const colors = ['#00f0ff', '#ffffff', '#b967ff', '#cc99ff'];
+            const color = colors[Math.floor(Math.random() * colors.length)];
 
-    update(mouse) {
-        // Movimiento sinuoso base
-        this.angle += this.baseSpeed;
-        this.x = this.x + Math.cos(this.angle) * this.distance * 0.05;
-        this.y = this.y + Math.sin(this.angle) * this.distance * 0.05;
+            // Gradiente radial para el humo
+            const gradient = ctx.createRadialGradient(x, y, 0, x, y, size);
+            gradient.addColorStop(0, color);
+            gradient.addColorStop(0.5, 'transparent');
+            gradient.addColorStop(1, 'transparent');
 
-        // Interacción con mouse
-        if (mouse.active && mouse.x && mouse.y) {
-            const dx = mouse.x - this.x;
-            const dy = mouse.y - this.y;
-            const distance = Math.sqrt(dx * dx + dy * dy);
+            ctx.beginPath();
+            ctx.arc(x, y, size, 0, Math.PI * 2);
+            ctx.fillStyle = gradient;
+            ctx.fill();
 
-            if (distance < 200) {
-                const force = (200 - distance) / 200;
-                this.vx += dx * this.mouseInfluence * force;
-                this.vy += dy * this.mouseInfluence * force;
-                this.alpha = Math.min(1, 0.8 + force * 0.2);
-                this.radius = Math.min(3, 0.5 + force * 2.5);
-
-                // Cambiar color si está cerca del mouse
-                if (distance < 80) {
-                    this.color = '#ffffff'; // Brilla más cerca del mouse
-                }
-            } else {
-                this.alpha = 0.6 + Math.random() * 0.3;
-                this.radius = 0.5 + Math.random() * 0.5;
-            }
+            // Efecto de brillo en el centro
+            const glowGradient = ctx.createRadialGradient(x, y, 0, x, y, size * 0.3);
+            glowGradient.addColorStop(0, color);
+            glowGradient.addColorStop(1, 'transparent');
+            ctx.beginPath();
+            ctx.arc(x, y, size * 0.3, 0, Math.PI * 2);
+            ctx.fillStyle = glowGradient;
+            ctx.fill();
         }
 
-        // Rebote suave en bordes
-        if (this.x - this.radius < 0 || this.x + this.radius > window.innerWidth) {
-            this.vx = -this.vx * 0.8;
-        }
-        if (this.y - this.radius < 0 || this.y + this.radius > window.innerHeight) {
-            this.vy = -this.vy * 0.8;
-        }
+        // Añadir partículas pequeñas dispersas (opcional)
+        for (let i = 0; i < 50; i++) {
+            const x = Math.random() * w;
+            const y = Math.random() * h;
+            const r = Math.random() * 0.5 + 0.3;
+            const color = Math.random() < 0.5 ? '#00f0ff' : '#b967ff';
 
-        // Aplicar velocidad
-        this.x += this.vx;
-        this.y += this.vy;
-
-        // Fricción
-        this.vx *= 0.95;
-        this.vy *= 0.95;
+            ctx.beginPath();
+            ctx.arc(x, y, r, 0, Math.PI * 2);
+            ctx.fillStyle = color;
+            ctx.fill();
+        }
     }
 }
 
 // === INICIALIZACIÓN ===
 document.addEventListener('DOMContentLoaded', function() {
-    new NeonSmoke();
+    new FluidNeonSmoke();
 
-    // Cursor personalizado con aura neón
+    // Cursor personalizado
     const cursorFollower = document.createElement('div');
     cursorFollower.className = 'cursor-follower';
     document.body.appendChild(cursorFollower);
