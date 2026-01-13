@@ -415,15 +415,6 @@ footer {
     margin-top: 1rem;
   }
 }
-/* === HEADER STYLES === */
-.topbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1rem 2rem;
-    background-color: #0a0a14; /* fondo oscuro */
-    border-bottom: 2px solid #9370DB; /* morado brillante */
-}
 
 /* === LOGO IMAGE STYLES === */
 .logo-container {
@@ -456,18 +447,4 @@ footer {
 .icon:hover {
     color: #00ffaa;
     text-shadow: 0 0 8px #00ffaa;
-}
-
-/* === NAVIGATION LINKS === */
-.nav-links a {
-    color: white;
-    text-decoration: none;
-    margin-left: 2rem;
-    font-size: 1rem;
-    transition: color 0.3s ease;
-}
-
-.nav-links a:hover,
-.nav-links a.active {
-    color: #00ffaa;
 }
