@@ -418,33 +418,21 @@ footer {
 
 /* === LOGO IMAGE STYLES === */
 .logo-container {
-    display: flex;
-    align-items: center;
-    gap: 1rem; /* espacio entre logo y texto */
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.logo-container .logo {
+  font-size: 1.4rem;
+}
+}
+.icon-logo {
+  width: 40px;
+  height: 40px;
 }
 
-.logo {
-    width: 70px; /* ajusta según necesites */
-    height: auto;
-    box-shadow: 0 0 10px rgba(0, 255, 255, 0.5); /* efecto neón opcional */
-    border-radius: 50%; /* opcional: si quieres que sea circular */
-}
-
-/* === ICON LINK STYLES === */
-.icon,
-.icon:hover,
-.icon:visited,
-.icon:active {
-    text-decoration: none;
-    color: inherit;
-    font-family: 'Courier New', Courier, monospace;
-    font-size: 1.5rem;
-    color: #00ffff;
-    text-shadow: 0 0 5px #00ffff;
-    transition: all 0.3s ease;
-}
-
-.icon:hover {
-    color: #00ffaa;
-    text-shadow: 0 0 8px #00ffaa;
+/* icon styles */
+.icon-logo {
+  width: 50px;
+  height: 50px;
 }
