@@ -415,3 +415,11 @@ footer {
     margin-top: 1rem;
   }
 }
+ /* === LOGO LINK STYLES === */
+.logo,
+.logo:hover,
+.logo:visited,
+.logo:active {
+    text-decoration: none;
+    color: inherit;
+}
