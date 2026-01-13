@@ -415,3 +415,49 @@ footer {
     margin-top: 1rem;
   }
 }
+
+/* === LOGO CONTAINER & TEXT === */
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.logo {
+  height: 50px;
+  width: auto;
+  filter: drop-shadow(0 0 6px var(--color-neon-azul));
+}
+
+.logo-text {
+  margin: 0;
+  font-size: 1.7rem;
+  font-weight: bold;
+  letter-spacing: 2px;
+  color: var(--color-neon-azul);
+  text-shadow:
+    0 0 5px var(--color-neon-azul),
+    0 0 10px var(--color-neon-azul),
+    0 0 15px var(--color-neon-azul),
+    0 0 20px var(--color-neon-azul),
+    0 0 25px var(--color-neon-azul),
+    0 0 30px var(--color-neon-azul);
+  -webkit-text-stroke: 1px #0066ff; /* azul más oscuro para contraste */
+}
+
+.logo-text a {
+  text-decoration: none;
+  color: inherit;
+  transition: all 0.3s ease;
+}
+
+.logo-text a:hover {
+  text-shadow:
+    0 0 8px var(--color-neon-azul),
+    0 0 16px var(--color-neon-azul),
+    0 0 24px var(--color-neon-azul),
+    0 0 32px var(--color-neon-azul),
+    0 0 40px var(--color-neon-azul),
+    0 0 48px var(--color-neon-azul);
+  -webkit-text-stroke: 1.5px #0066ff;
+}
