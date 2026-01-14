@@ -30,4 +30,4 @@ Aquest repositori conté el codi font del meu **portafoli professional** com a A
 
 ## 📁 Estructura del projecte
 
-![Estrucutura](/img/estrucutura)
+![Estructura](img/estructura.png)
