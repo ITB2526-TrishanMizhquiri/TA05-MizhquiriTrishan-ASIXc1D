@@ -7,7 +7,7 @@
 
 Aquest repositori conté el codi font del meu **portafoli professional** com a Administrador de Sistemes i Xarxes, amb especialització en **Ciberseguretat**. El lloc web mostra els meus projectes, habilitats tècniques i informació de contacte.
 
-## 🌐 Contingut principal
+## Contingut principal
 
 - **Inici**: Presentació general i projectes destacats.
 - **Proyectos**: Llista completa de projectes tècnics relacionats amb:
@@ -20,7 +20,7 @@ Aquest repositori conté el codi font del meu **portafoli professional** com a A
 - **Habilidades**: Detall de competències en infraestructura, ciberseguretat i automatització.
 - **Contacto**: Informació per col·laborar o contractar serveis professionals.
 
-## 🛠️ Tecnologies utilitzades
+## Tecnologies utilitzades
 
 - **Frontend**: HTML5, CSS3 (disseny responsive), JavaScript
 - **Estil**: Paleta de colors *cyberpunk* basada en tons violetes i neó
@@ -28,6 +28,22 @@ Aquest repositori conté el codi font del meu **portafoli professional** com a A
 - **Icones**: Font Awesome
 - **Organització**: Estructura clara de fitxers i imatges
 
-## 📁 Estructura del projecte
+## Estructura del projecte
 
 ![Estructura](img/estructura.png)
+
+
+## Objectiu del projecte
+
+Aquest portafoli té com a objectiu:
+- Mostrar les meves competències tècniques de forma visual i funcional.
+- Demostrar la capacitat de desenvolupar una presència web professional sense frameworks.
+- Servir com a punt d’entrada per a col·laboracions, pràctiques o contractació de serveis IT.
+
+## Contacte
+
+📧 **Email**: trishan.mizhquiri@email.com  
+📍 **Ubicació**: Barcelona, Catalunya (disponible per a projectes remots)  
+🔗 **LinkedIn**: [Perfil professional](#) *(actualitza l’enllaç quan el tinguis públic)*
+
+© 2025 Trishan Mizhquiri Valencia – Administrador de Sistemes i Xarxes | Especialista en Ciberseguretat
